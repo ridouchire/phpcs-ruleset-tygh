@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<ruleset name="Tygh">
+  <description>A coding standard based on an early CSCart company coding standard. Note that this standard is out of date.</description>
+  <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+  <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+
+  <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+  <rule ref="Generic.PHP.Syntax"/>
+  <rule ref="Generic.PHP.ForbiddenFunctions">
+    <properties>
+      <property name="forbiddenFunctions" type="array" value="var_dump=null,print_r=null,fn_print_r=null,var_export=null"/>
+    </properties>
+  </rule>
+  <rule ref="Generic.PHP.ForbiddenFunctions.Found">
+    <message>Debug with (%s)</message>
+  </rule>
+
+  <rule ref="Generic.ControlStructures.InlineControlStructure"/>
+
+  <rule ref="Generic.Files.LineLength"/>
+
+  <rule ref="Generic.Metrics.NestingLevel"/>
+
+  <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+
+  <rule ref="Generic.WhiteSpace.ScopeIndent"/>
+  <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+  
+  <rule ref="PEAR.Commenting.FunctionComment"/>
+  
+  <rule ref="PEAR.Functions.FunctionDeclaration"/>
+  <rule ref="PEAR.Functions.FunctionCallSignature"/>
+  <rule ref="PEAR.Functions.ValidDefaultValue"/>
+  
+  <rule ref="PEAR.Classes.ClassDeclaration"/>
+  
+  <rule ref="PEAR.ControlStructures.ControlSignature"/>
+  
+  <rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
+  
+  <rule ref="PSR1.Classes.ClassDeclaration"/>
+  
+  <rule ref="PSR1.Methods.CamelCapsMethodName"/>
+  
+  <rule ref="PSR1.Files.SideEffect.FoundWithSymbols">
+    <severity>0</severity>
+  </rule>
+  
+  <rule ref="PSR2.Classes.PropertyDeclaration"/>
+  
+  <rule ref="PSR2.ControlStructures.ControlStructureSpacing"/>
+  <rule ref="PSR2.ControlStructures.ElseIfDeclaration"/>
+  
+  <rule ref="PSR2.Files.EndFileNewline"/>
+  
+  <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
+  <rule ref="PSR2.Namespaces.UseDeclaration"/>
+  
+  <rule ref="Squiz.PHP.NonExecutableCode"/>
+  <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
+  
+  <rule ref="Generic.Files.LineEndings">
+    <properties>
+      <property name="eolChar" value="\n"/>
+    </properties>
+  </rule>
+  <rule ref="Generic.Files.LineLength">
+    <properties>
+      <property name="lineLimit" value="120"/>
+      <property name="absoluteLineLimit" value="140"/>
+    </properties>
+  </rule>
+</ruleset>
